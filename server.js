@@ -14,10 +14,10 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use('api/auth', require('./routes/auth'));
-app.use('api/users', require('./routes/users'));
-app.use('api/playlists', require('./routes/playlists'));
-app.use('api/comments', require('./routes/comments'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/playlists', require('./routes/playlists'));
+app.use('/api/comments', require('./routes/comments'));
 
 app.get('/', (req, res) => {
   res.send('🎵 LuMe API is running');
